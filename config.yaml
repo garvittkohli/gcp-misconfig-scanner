@@ -1,0 +1,33 @@
+scanner:
+  dangerous_ports:
+    - port: 22
+      label: "SSH"
+    - port: 3389
+      label: "RDP"
+    - port: 23
+      label: "Telnet"
+    - port: 3306
+      label: "MySQL"
+    - port: 5432
+      label: "PostgreSQL"
+    - port: 1521
+      label: "Oracle DB"
+    - port: 6379
+      label: "Redis"
+    - port: 27017
+      label: "MongoDB"
+  sa_key_max_age_days: 90
+  skip_scanners: []
+
+elk:
+  enabled: false
+  host: "http://localhost:9200"
+  index: "gcp-misconfig-findings"
+  username: ""
+  password: ""
+
+output:
+  directory: "output"
+  json_filename: "findings.json"
+  html_filename: "report.html"
+  terraform_dir: "output/terraform_fixes"

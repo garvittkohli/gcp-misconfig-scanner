@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# GCP credentials — never commit these
+*.json
+service-account*.json
+credentials*.json
+application_default_credentials.json
+
+# Environment variables
+.env
+.env.local
+
+# Scanner output
+output/
+!output/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+
+# Terraform state
+*.tfstate
+*.tfstate.backup
+.terraform/
