@@ -6,7 +6,7 @@
 
 ## Background
 
-I built this after leading incident response on a crypto mining compromise on our GCP infrastructure. Post-incident, I had no systematic way to check whether our configuration had drifted from what we'd intended — whether someone had added a permissive firewall rule, left a bucket public, or forgotten to enable audit logging. Google's Security Command Center solves this but at a cost that doesn't fit every team. Prowler and ScoutSuite cover hundreds of checks across multiple clouds but produce no remediation code. I wanted something that fit our actual workflow: findings that generate Terraform blocks, feeding directly into the same PR review process we use for all infrastructure changes.
+I built this after helping respond to a crypto mining compromise on our GCP infrastructure. Post-incident, I had no systematic way to check whether our configuration had drifted from what we'd intended - whether someone had added a permissive firewall rule, left a bucket public, or forgotten to enable audit logging. Google's Security Command Center solves this but at a cost that doesn't fit every team. Prowler and ScoutSuite cover hundreds of checks across multiple clouds but produce no remediation code. I wanted something that fit our actual workflow: findings that generate Terraform blocks, feeding directly into the same PR review process we use for all infrastructure changes.
 
 ## What It Does
 
@@ -34,7 +34,7 @@ cli.py
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gcp-misconfig-scanner
+git clone https://github.com/garvittkohli/gcp-misconfig-scanner
 cd gcp-misconfig-scanner
 pip install -r requirements.txt
 pip install -e .
